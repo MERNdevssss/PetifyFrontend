@@ -5,7 +5,8 @@ import NotFound from './components/pages/NotFound.jsx';
 import Navbar from './components/Layout/Navbar';
 import PetSuggest from './components/pages/PetSuggest';
 import { BrowserRouter , Routes, Route } from 'react-router-dom';
-
+// Ashish ,Sirisha, Mayank ,Khusbhoo
+// This is Petify
 function App() {
   return (
     <BrowserRouter>
@@ -16,7 +17,6 @@ function App() {
         
       </Routes>
     </BrowserRouter>
-    
   );
 }
 
