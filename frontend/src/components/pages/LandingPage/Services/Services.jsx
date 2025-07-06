@@ -1,35 +1,47 @@
 import React from "react";
 import { Button } from "@mui/material";
+import {useNavigate} from "react-router-dom";
+import trainingImg from '../../../../assets/training.jpg';
+import adoptionImg from '../../../../assets/adoption.jpg';
+import hostelImg from '../../../../assets/Hostel.jpg';
+import medicalImg from '../../../../assets/medical.jpg';
+import groomingImg from '../../../../assets/grooming.jpg';
 
-const services = [
+export default function Services() {
+  const navigate=useNavigate();
+
+  const services = [
   {
     title: "Pet Training",
-    image: "https://picsum.photos/id/237/600/400", 
+    image: trainingImg, 
     buttonText: "See More",
+    next:'/pet-training'
   },
   {
     title: "Medical Consultation",
-    image: "https://picsum.photos/id/1025/600/400", 
+    image: medicalImg, 
     buttonText: "See More",
+    next:'#'
   },
   {
     title: "Pet Grooming",
-    image: "https://picsum.photos/id/1062/600/400", 
+    image: groomingImg,
     buttonText: "See More",
+    next:'#'
   },
   {
     title: "Pet Adoption",
-    image: "https://picsum.photos/id/1074/600/400",
+    image: adoptionImg,
     buttonText: "See More",
+    next:'#'
   },
   {
     title: "Pet Hostel",
-    image: "https://picsum.photos/id/1084/600/400", 
+    image: hostelImg, 
     buttonText: "Book Now",
+    next:'#'
   },
 ];
-
-export default function Services() {
   return (
     <section className="bg-[#FFF6F1] py-12 px-4 md:px-8 lg:px-16">
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-10">
@@ -60,6 +72,7 @@ export default function Services() {
                 {service.title}
               </h3>
               <Button
+                onClick={()=>navigate(service.next)}
                 variant="outlined"
                 sx={{
                   color: "#fff",
