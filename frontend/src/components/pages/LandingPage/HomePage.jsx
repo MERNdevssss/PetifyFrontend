@@ -81,11 +81,15 @@ import PetsIcon from "@mui/icons-material/Pets";
 import { Button } from "@mui/material";
 import Services from "./Services/Services";
 import Blog from "./Blog/Blog";
+import Footer from "./Footer/Footer";
+import TestimonialSlider from "./Testimonial/Testimonial";
 
 const HomePage = () => {
   return (<>
     <Services/>
+    <TestimonialSlider/>
     <Blog/>
+    <Footer/>
   </>);
 };
 
