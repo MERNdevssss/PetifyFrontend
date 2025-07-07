@@ -5,12 +5,11 @@ import HeroSection from "./Hero/HeroSection";
 import CategoriesSection from "./Categories/CategoriesSection";
 import ProductSection from "../Products/ProductSection";
 import RoiSection from "../Roi/RoiSection";
-import TestimonialSection from "./Testimonial/Testimonial";
+import TestimonialSection from "./Testimonials/TestimonialSection";
 
 const HomePage = () => {
   return (
     <>
-
       <HeroSection />
       <CategoriesSection/>
       <ProductSection/>

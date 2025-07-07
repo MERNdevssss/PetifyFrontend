@@ -1,6 +1,5 @@
-import React from 'react';
+import React from 'react'
 
-// Sample data for reviews
 const reviews = [
   {
     name: "John Doe",
@@ -39,7 +38,6 @@ const reviews = [
   },
 ];
 
-// Star component for displaying rating
 const Star = ({ filled }) => (
   <span className={`text-orange-400 text-sm ${filled ? '' : 'opacity-30'}`}>★</span>
 );
@@ -48,7 +46,7 @@ const Star = ({ filled }) => (
 const ReviewCard = ({ review }) => (
   <div className="bg-white rounded-xl w-[450px] h-[400px] shadow-md flex-shrink-0 flex flex-col mr-4">
     <div className="flex items-start justify-between p-4 bg-gray-300 rounded-t-xl">
-      {/* Left: Image */}
+  
       <img
         src={review.imageUrl}
         alt={review.name}
@@ -75,7 +73,7 @@ const ReviewCard = ({ review }) => (
 );
 
 // ReviewSection component to display all reviews
-const ReviewSection = () => {
+const TestimonialSection = () => {
   return (
     <section className="bg-[#5EB2D7] py-10 px-4 rounded-2xl">
       <h2 className="text-center text-4xl font-bold text-[#1E1E1E] mb-10">
@@ -105,5 +103,5 @@ const ReviewSection = () => {
   );
 };
 
-export default ReviewSection;
 
+export default TestimonialSection
