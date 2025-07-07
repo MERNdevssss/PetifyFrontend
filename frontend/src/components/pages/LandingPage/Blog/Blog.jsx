@@ -1,18 +1,19 @@
 import React from "react";
 import { Button } from "@mui/material";
+import BlogAdoptionImg from '../../../../assets/blogAdoption.jpg';
+import BlogTrainingImg from '../../../../assets/blogTraining.jpg';
 
-const blogs = [
+export default function Blog() {
+  const blogs = [
   {
     title: "Basic Training Techniques for New Puppy Owners",
-    image: "https://picsum.photos/id/1011/600/400", // Placeholder image
+    image: BlogAdoptionImg,
   },
   {
     title: "How to help your adopted pet adjust to their new home?",
-    image: "https://picsum.photos/id/1015/600/400", // Placeholder image
+    image: BlogTrainingImg,
   },
 ];
-
-export default function Blog() {
   return (
     <section className="bg-[#FFF6F1] py-12 px-4 md:px-8 lg:px-16">
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-gray-800 mb-10">
