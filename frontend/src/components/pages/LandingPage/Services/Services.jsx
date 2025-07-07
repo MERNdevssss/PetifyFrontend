@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 import {useNavigate} from "react-router-dom";
 import trainingImg from '../../../../assets/training.jpg';
 import adoptionImg from '../../../../assets/adoption.jpg';
-import hostelImg from '../../../../assets/Hostel.jpg';
+import hostelImg from '../../../../assets/hostel.jpg';
 import medicalImg from '../../../../assets/medical.jpg';
 import groomingImg from '../../../../assets/grooming.jpg';
 

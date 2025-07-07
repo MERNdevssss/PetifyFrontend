@@ -6,7 +6,6 @@ import CategoriesSection from "./Categories/CategoriesSection";
 import ProductSection from "../Products/ProductSection";
 import RoiSection from "../Roi/RoiSection";
 import TestimonialSection from "./Testimonial/Testimonial";
-import Footer from "./Footer/Footer";
 
 const HomePage = () => {
   return (
@@ -19,7 +18,6 @@ const HomePage = () => {
       <RoiSection/>
       <TestimonialSection/>
       <Blog />
-    <Footer/>
     </>
   );
 
