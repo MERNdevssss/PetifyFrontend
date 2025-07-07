@@ -28,7 +28,7 @@ const RoiSection = () => {
 
   return (
     <div className="bg-[#FFF6F1] py-16 px-4 sm:px-6 lg:px-10">
-  <section className="bg-[#D2F4EC] py-12 px-4 sm:px-6 lg:px-10 rounded-2xl shadow-md">
+  <section className="bg-[#bcf3e6] py-12 px-4 sm:px-6 lg:px-10 rounded-2xl shadow-md">
     <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center">
       {stats.map((stat, index) => (
         <div key={index} className="flex flex-col items-center">
