@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import { Menu, X, Search, ChevronDown } from "lucide-react";
+
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -41,6 +43,7 @@ export default function Navbar() {
     },
     {
       name: "Categories",
+      link: "/categories",
       hasDropdown: true,
       items: ["Dogs", "Cats", "Birds", "Fish", "Small Animals", "Reptiles"],
     },
@@ -53,9 +56,9 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-white rounded-full flex justify-center items-center">
-              <span className="text-[#7E3FF2] text-lg font-bold">🐾</span>
+              <span className="text-petify-brand-purple text-lg font-bold">🐾</span>
             </div>
-            <a href="/" className="text-[#7E3FF2] font-extrabold text-lg">
+            <a href="/" className="text-petify-brand-purple font-extrabold text-lg">
               PETIFY
             </a>
           </div>
@@ -66,9 +69,9 @@ export default function Navbar() {
                   onClick={() =>
                     item.hasDropdown ? handleDropdownToggle(item.name) : null
                   }
-                  className="flex items-center space-x-1 hover:text-[#7E3FF2] transition-colors duration-300"
+                  className="flex items-center space-x-1 hover:text-petify-brand-purple transition-colors duration-300"
                 >
-                  <span>{item.name}</span>
+                  <Link to={item.link ? item.link : "/" }>{item.name}</Link>
                   {item.hasDropdown && (
                     <ChevronDown
                       size={16}
@@ -99,7 +102,7 @@ export default function Navbar() {
             <button className="p-2 hover:bg-white/10 rounded-full transition-colors duration-200">
               <Search size={20} />
             </button>
-            <button className="bg-[#7E3FF2] hover:bg-[#6B2FD1] text-white px-6 py-2 rounded-xl font-bold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <button className="bg-petify-brand-purple hover:bg-petify-brand-purple/80 text-white px-6 py-2 rounded-xl font-bold transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
               Log In
             </button>
           </div>
@@ -134,7 +137,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between p-6 border-b border-white/20">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-white rounded-full flex justify-center items-center">
-                  <span className="text-[#7E3FF2] text-lg font-bold">🐾</span>
+                  <span className="text-petify-brand-purple text-lg font-bold">🐾</span>
                 </div>
                 <span className="text-white font-extrabold text-lg">
                   PETIFY
@@ -192,7 +195,7 @@ export default function Navbar() {
             <div className="p-6 border-t border-white/20">
               <button
                 onClick={closeSidebar}
-                className="w-full bg-white text-[#7E3FF2] py-3 px-6 rounded-xl font-bold hover:bg-gray-100 transition-colors duration-200 shadow-lg"
+                className="w-full bg-white text-petify-brand-purple py-3 px-6 rounded-xl font-bold hover:bg-gray-100 transition-colors duration-200 shadow-lg"
               >
                 Log In
               </button>
